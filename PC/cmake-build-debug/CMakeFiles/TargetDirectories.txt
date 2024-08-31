@@ -1,0 +1,3 @@
+C:/Users/26808/CLionProjects/UART/cmake-build-debug/CMakeFiles/UART.dir
+C:/Users/26808/CLionProjects/UART/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/26808/CLionProjects/UART/cmake-build-debug/CMakeFiles/rebuild_cache.dir

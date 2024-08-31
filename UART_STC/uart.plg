@@ -1,0 +1,19 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\26808\Desktop\MIDI-UART-STC\UART_STC\uart.uvproj
+Project File Date:  04/24/2019
+
+<h2>Output:</h2>
+Build target 'Target 1'
+linking...
+Program Size: data=56.1 xdata=0 code=862
+creating hex file from "uart"...
+"uart" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=56.1 xdata=0 code=862
+creating hex file from "uart"...
+"uart" - 0 Error(s), 0 Warning(s).

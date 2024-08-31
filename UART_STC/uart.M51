@@ -1,0 +1,233 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        08/31/2024  16:56:08  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE uart.obj TO uart
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  uart.obj (UART)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULDIV)
+
+
+LINK MAP OF MODULE:  uart (UART)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            REG     0008H     0008H     ABSOLUTE     "REG BANK 1"
+                    0010H     0010H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         ?BI?UART
+                    0020H.1   0000H.7                *** GAP ***
+            DATA    0021H     0027H     UNIT         ?DT?UART
+            IDATA   0048H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0007H     UNIT         ?C_INITSEG
+                    000AH     0001H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0005H     UNIT         ?PR?MAIN?UART
+                    0013H     0010H                  *** GAP ***
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     0123H     UNIT         ?C?LIB_CODE
+            CODE    0149H     00C0H     UNIT         ?PR?T0_PROCESS?UART
+            CODE    0209H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0295H     0057H     UNIT         ?PR?UART1_PROCESS?UART
+            CODE    02ECH     0044H     UNIT         ?C?LDIV
+            CODE    0330H     0023H     UNIT         ?PR?INIT?UART
+            CODE    0353H     001CH     UNIT         ?PR?UART1_INIT?UART
+
+
+
+OVERLAY MAP OF MODULE:   uart (UART)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?UART
+  +--> ?C_INITSEG
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/31/2024  16:56:08  PAGE 2
+
+
+
+?PR?MAIN?UART
+  +--> ?PR?INIT?UART
+
+?PR?INIT?UART
+  +--> ?PR?UART1_INIT?UART
+
+
+
+SYMBOL TABLE OF MODULE:  uart (UART)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        UART
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0093H         PUBLIC        P0M1
+  D:0096H         PUBLIC        P2M0
+  D:0080H         PUBLIC        P0
+  D:00B2H         PUBLIC        P3M0
+  D:0095H         PUBLIC        P2M1
+  D:0090H         PUBLIC        P1
+  D:00B1H         PUBLIC        P3M1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  B:00A8H.7       PUBLIC        EA
+  D:00E8H         PUBLIC        P6
+  D:00F8H         PUBLIC        P7
+  D:00A8H         PUBLIC        IE
+  C:0295H         PUBLIC        Uart1_Process
+  C:0330H         PUBLIC        Init
+  B:00A8H.4       PUBLIC        ES
+  D:00B8H         PUBLIC        IP
+  D:0021H         PUBLIC        pitch
+  B:0098H.0       PUBLIC        RI
+  B:0098H.1       PUBLIC        TI
+  D:0023H         PUBLIC        bias
+  B:00B8H.4       PUBLIC        PS
+  D:00D8H         PUBLIC        CCON
+  C:000EH         PUBLIC        main
+  D:0024H         PUBLIC        tick
+  B:0080H.0       PUBLIC        P00
+  D:0099H         PUBLIC        SBUF
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  D:008EH         PUBLIC        AUXR
+  C:0353H         PUBLIC        Uart1_Init
+  C:0149H         PUBLIC        T0_Process
+  B:00B0H.4       PUBLIC        sbtBeep
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008DH         PUBLIC        TH1
+  D:008AH         PUBLIC        TL0
+  D:008BH         PUBLIC        TL1
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/31/2024  16:56:08  PAGE 3
+
+
+  B:0020H.0       PUBLIC        btBeepFlag
+  B:0088H.4       PUBLIC        TR0
+  D:0026H         PUBLIC        ptr
+  B:0088H.6       PUBLIC        TR1
+  D:0027H         PUBLIC        tickcnt
+  D:00D0H         PUBLIC        PSW
+  D:0028H         SYMBOL        buffer
+  D:0094H         PUBLIC        P0M0
+  -------         PROC          T0_PROCESS
+  C:0149H         LINE#         20
+  C:0166H         LINE#         22
+  C:0169H         LINE#         23
+  C:016FH         LINE#         24
+  C:016FH         LINE#         25
+  C:0171H         LINE#         26
+  C:018EH         LINE#         27
+  C:0196H         LINE#         28
+  C:0199H         LINE#         29
+  C:0199H         LINE#         32
+  C:01BDH         LINE#         33
+  C:01E3H         LINE#         35
+  C:01E6H         LINE#         36
+  C:01E6H         LINE#         37
+  C:01E8H         LINE#         38
+  C:01EAH         LINE#         40
+  C:01ECH         LINE#         42
+  C:01EEH         LINE#         43
+  -------         ENDPROC       T0_PROCESS
+  -------         PROC          UART1_INIT
+  C:0353H         LINE#         47
+  C:0353H         LINE#         48
+  C:0353H         LINE#         49
+  C:0356H         LINE#         50
+  C:0359H         LINE#         51
+  C:035CH         LINE#         52
+  C:035FH         LINE#         53
+  C:0362H         LINE#         54
+  C:0364H         LINE#         55
+  C:0366H         LINE#         56
+  C:0368H         LINE#         57
+  C:036AH         LINE#         58
+  C:036CH         LINE#         59
+  C:036EH         LINE#         60
+  -------         ENDPROC       UART1_INIT
+  -------         PROC          UART1_PROCESS
+  C:0295H         LINE#         64
+  C:029CH         LINE#         66
+  C:029FH         LINE#         67
+  C:029FH         LINE#         68
+  C:02A1H         LINE#         69
+  C:02ABH         LINE#         70
+  C:02BAH         LINE#         71
+  C:02BAH         LINE#         72
+  C:02C3H         LINE#         73
+  C:02C9H         LINE#         74
+  C:02D9H         LINE#         75
+  C:02DEH         LINE#         76
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/31/2024  16:56:08  PAGE 4
+
+
+  C:02E1H         LINE#         77
+  C:02E4H         LINE#         79
+  C:02E7H         LINE#         80
+  C:02E7H         LINE#         81
+  C:02E7H         LINE#         90
+  C:02E7H         LINE#         92
+  -------         ENDPROC       UART1_PROCESS
+  -------         PROC          INIT
+  C:0330H         LINE#         94
+  C:0330H         LINE#         95
+  C:0330H         LINE#         96
+  C:0332H         LINE#         97
+  C:0335H         LINE#         98
+  C:0337H         LINE#         99
+  C:033AH         LINE#         100
+  C:033CH         LINE#         101
+  C:033FH         LINE#         102
+  C:0341H         LINE#         104
+  C:0344H         LINE#         105
+  C:0346H         LINE#         106
+  C:0349H         LINE#         107
+  C:034CH         LINE#         108
+  C:034EH         LINE#         109
+  C:0350H         LINE#         110
+  -------         ENDPROC       INIT
+  -------         PROC          MAIN
+  C:000EH         LINE#         113
+  C:000EH         LINE#         114
+  C:000EH         LINE#         115
+  C:0011H         LINE#         116
+  C:0011H         LINE#         117
+  C:0011H         LINE#         119
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        UART
+
+  -------         MODULE        ?C?UIDIV
+  C:0026H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?SLDIV
+  C:02ECH         PUBLIC        ?C?SLDIV
+  -------         ENDMOD        ?C?SLDIV
+
+  -------         MODULE        ?C?ULDIV
+  C:00B7H         PUBLIC        ?C?ULDIV
+  -------         ENDMOD        ?C?ULDIV
+
+Program Size: data=56.1 xdata=0 code=862
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
